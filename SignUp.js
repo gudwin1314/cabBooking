@@ -10,11 +10,11 @@ export default function SignUpScreen({ navigation }) {
 
 
   const handleSignUp = () => {
-    console.log('Attempting to sign up with:', email); // Log email
+    console.log('Attempting to sign up with:', email);
     createUserWithEmailAndPassword(auth, email, password)
       .then(() => {
         console.log('Sign up successful');
-        navigation.navigate('Login'); // Uncomment only if you want to navigate manually
+        navigation.navigate('Login');
       })
       .catch(error => {
         console.log('Sign up error:', error.message);
